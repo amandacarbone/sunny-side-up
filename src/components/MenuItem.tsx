@@ -15,7 +15,7 @@ export function MenuItem(props: { items: Item[] }) {
                     <li>Calories: {item.calories}</li>
                     <li>Vegetarian: {item.vegetarian ? "Yes" : "No"}</li>
                     <li>${item.price}</li>
-                    <button onClick={() => addItem(item)}>Add to Cart</button>
+                    <button onClick={() => addItem(item)}>Add to Order</button>
                 </ul>)}
         </div>
     );

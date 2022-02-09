@@ -1,5 +1,9 @@
-.cart {
-    height: 200px;
-    width: 200px;
-    background-color: #FFFFFF;
+.cart ul {
+    list-style-type: none;
+}
+
+.cart .material-icons {
+    position: absolute;
+    top: 11.5%;
+    right: 5%;
 }

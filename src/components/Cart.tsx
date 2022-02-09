@@ -16,14 +16,14 @@ export function Cart() {
 
     return (
         <div className="cart">
-            <h2>Cart</h2>
+            <h2>Order:</h2>
             {orders.map(order =>
                 <ul key={order.id}>
-                    <li>{order.name}</li>
-                    <li>${order.price}</li>
-                    <button className={showRemoveButton() === true ? "show" : "hide"} 
-                    onClick={() => removeItem(order.id)}>Remove</button>
+                    <li>{order.name} - ${order.price}</li>
+                    <button className={showRemoveButton() === true ? "material-icons" : "hide"} 
+                    onClick={() => removeItem(order.id)}>cancel</button>
                 </ul>)}
+            <h2>Total:</h2>
         </div>
     );
 
