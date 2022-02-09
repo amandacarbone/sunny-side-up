@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b7e9e9;
+    color: #FFFFFF;
+}
+
+.header h1 {
+    margin-left: 15px;
+    background-color: #a4a4a4;
+    padding: 6px;
+}
+
+.material-icons {
+    background: none;
+    border: none;
+    margin-right: 15px;
+    cursor: pointer;
+}
