@@ -2,7 +2,7 @@ export interface Item {
     id: string;
     name: string;
     description: string;
-    calories: string;
+    calories: number;
     price: number;
     vegetarian: boolean;
 }

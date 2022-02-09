@@ -11,17 +11,19 @@ export function Header() {
         isPaneOpen: false,
     });
 
-    const { orders, addItem } = useContext(OrderContext);
+    const { orders, addItem, removeItem } = useContext(OrderContext);
 
     return (
         <div className="header">
             <h1>Sunny Side Up</h1>
-            <button className="material-icons" onClick={() => setShowCart({ isPaneOpen: true })}>shopping_cart</button>
+            <button className="material-icons" onClick={() => 
+                setShowCart({ isPaneOpen: true })}>shopping_cart</button>
             <SlidingPane
             className="Cart"
             isOpen={showCart.isPaneOpen}
             from="right"
-            onRequestClose={() => setShowCart({ isPaneOpen: false })}>
+            onRequestClose={() => 
+                setShowCart({ isPaneOpen: false })}>
             {showCart && <Cart></Cart>}
             </SlidingPane>
         </div>

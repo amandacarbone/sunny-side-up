@@ -13,5 +13,5 @@ const defaultValue: OrderContext = {
     removeItem: () => {}
 }
 
-const OrderContext = createContext(defaultValue);
+const OrderContext = createContext<OrderContext>(defaultValue);
 export default OrderContext;

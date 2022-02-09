@@ -1,8 +1,9 @@
-import { useContext } from "react";
-import { MenuItem } from "./MenuItem";
+import { useContext, useState } from "react";
 import OrderContext from "../contexts/OrderContext";
+import { Item } from "../models/Item";
+import { MenuItem } from "./MenuItem";
 
-export const menu = [
+const menu = [
     {
         id: "abc123",
         name: "Chicken and Waffles",
@@ -63,11 +64,9 @@ export const menu = [
 
 export function MenuList() {
 
-    const { addItem } = useContext(OrderContext);
-
     return(
         <div>
-            <MenuItem></MenuItem>
+            <MenuItem items={menu}></MenuItem>
         </div>
     );
 

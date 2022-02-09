@@ -1,21 +1,21 @@
 import { useContext, useState } from "react";
 import OrderContext from "../contexts/OrderContext";
-import { menu } from "./MenuList";
+import { Item } from "../models/Item";
 
-export function MenuItem() {
+export function MenuItem(props: { items: Item[] }) {
 
-    const [menuItems, setMenuItems] = useState(menu);
+    const { addItem } = useContext(OrderContext);
 
     return (
         <div className="menu">
-            {menuItems.map(menuItem =>
-                <ul key={menuItem.id}>
-                    <li>{menuItem.name}</li>
-                    <li>{menuItem.description}</li>
-                    <li>Calories: {menuItem.calories}</li>
-                    <li>Vegetarian: {menuItem.vegetarian}</li>
-                    <li>${menuItem.price}</li>
-                    <button>Add to Order</button>
+            {props.items.map(item =>
+                <ul key={item.id}>
+                    <li>{item.name}</li>
+                    <li>{item.description}</li>
+                    <li>Calories: {item.calories}</li>
+                    <li>Vegetarian: {item.vegetarian ? "Yes" : "No"}</li>
+                    <li>${item.price}</li>
+                    <button onClick={() => addItem(item)}>Add to Cart</button>
                 </ul>)}
         </div>
     );
